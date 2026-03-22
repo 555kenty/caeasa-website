@@ -1,27 +1,65 @@
+:root {
+  --brown: #7a3b1e;
+  --brown-dark: #4e2309;
+  --brown-light: #a0552e;
+  --earth: #c47a45;
+  --earth-light: #e8c4a0;
+  --earth-xl: #f7ede2;
+  --green: #3d7a2e;
+  --green-dark: #1e4a14;
+  --green-light: #6aaa55;
+  --green-xl: #e8f3e4;
+  --cream: #faf6f0;
+  --cream-2: #f0e8dc;
+  --ink: #1e1208;
+  --ink-2: #4a3020;
+  --muted: #9a8070;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brown);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown-light);
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) {
+  .custom-cursor {
+    display: none !important;
   }
+}
+
+/* Partner carousel animation */
+.partner-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.partner-scroll:hover {
+  animation-play-state: paused;
 }
