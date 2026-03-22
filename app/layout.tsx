@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Cursor from "@/components/Cursor";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -23,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="fr" className={jakarta.variable}>
       <body className="font-sans antialiased bg-cream text-ink">
-        <Cursor />
         {children}
       </body>
     </html>
