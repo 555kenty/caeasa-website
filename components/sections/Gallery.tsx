@@ -3,7 +3,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { galleryImages } from "@/lib/data";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Users, Flower, Wheat, Sprout, Droplets, Factory } from "lucide-react";
+
+const galleryIcons = [Users, Flower, Wheat, Sprout, Droplets, Factory];
 
 export default function Gallery() {
   const ref = useRef(null);
@@ -30,15 +32,19 @@ export default function Gallery() {
     return (currentIndex + offset + galleryImages.length) % galleryImages.length;
   };
 
+  const CurrentIcon = galleryIcons[currentIndex];
+  const PrevIcon = galleryIcons[getSlideIndex(-1)];
+  const NextIcon = galleryIcons[getSlideIndex(1)];
+
   return (
     <section id="galerie" className="py-24 bg-white overflow-hidden" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex items-center justify-between mb-12"
+          className="flex flex-col sm:flex-row sm:items-center justify-between mb-12 gap-4"
         >
           <div>
             <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-semibold tracking-wide mb-4">
@@ -84,7 +90,7 @@ export default function Gallery() {
               onClick={prevSlide}
             >
               <div className="w-full h-full bg-gradient-to-br from-green/20 via-earth/20 to-brown/20 flex items-center justify-center">
-                <span className="text-4xl">{["🌾", "🌻", "🌽", "🌱", "💧", "🏭"][getSlideIndex(-1)]}</span>
+                <PrevIcon className="w-16 h-16 text-green/40" />
               </div>
             </motion.div>
 
@@ -97,7 +103,7 @@ export default function Gallery() {
               className="w-full lg:w-1/2 aspect-[16/10] bg-cream overflow-hidden relative group"
             >
               <div className="w-full h-full bg-gradient-to-br from-green via-earth to-brown flex items-center justify-center">
-                <span className="text-8xl">{["🌾", "🌻", "🌽", "🌱", "💧", "🏭"][currentIndex]}</span>
+                <CurrentIcon className="w-24 h-24 sm:w-32 sm:h-32 text-white/30" />
               </div>
               
               {/* Overlay with caption */}
@@ -119,7 +125,7 @@ export default function Gallery() {
               onClick={nextSlide}
             >
               <div className="w-full h-full bg-gradient-to-br from-green/20 via-earth/20 to-brown/20 flex items-center justify-center">
-                <span className="text-4xl">{["🌾", "🌻", "🌽", "🌱", "💧", "🏭"][getSlideIndex(1)]}</span>
+                <NextIcon className="w-16 h-16 text-green/40" />
               </div>
             </motion.div>
           </div>
@@ -130,12 +136,12 @@ export default function Gallery() {
               <button
                 key={index}
                 onClick={() => { setCurrentIndex(index); setIsAutoPlaying(false); }}
-                className={`w-2 h-2 transition-all duration-300 ${
+                className={`h-2 transition-all duration-300 ${
                   index === currentIndex 
                     ? "w-8 bg-brown" 
-                    : "bg-ink/20 hover:bg-ink/40"
+                    : "w-2 bg-ink/20 hover:bg-ink/40"
                 }`}
-                aria-label={`Aller à l'image ${index + 1}`}
+                aria-label={`Aller à l\u0026apos;image ${index + 1}`}
               />
             ))}
           </div>

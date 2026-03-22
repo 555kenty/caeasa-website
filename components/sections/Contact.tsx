@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { antennes } from "@/lib/data";
+import { MapPin, Phone, Mail, Send } from "lucide-react";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -16,12 +17,11 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: handle form submission
     console.log("Form submitted:", formData);
   };
 
   return (
-    <section id="contact" className="py-24 bg-cream-2" ref={ref}>
+    <section id="contact" className="py-24 bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -30,28 +30,28 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-green/10 text-green-dark text-sm font-medium  mb-4">
-            Contactez-nous
+          <span className="inline-block px-4 py-2 bg-green/10 text-green-dark text-sm font-semibold tracking-wide mb-4">
+            CONTACTEZ-NOUS
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink tracking-tight mb-4">
             Restons en contact
           </h2>
-          <p className="text-lg text-muted">
-            Vous avez un projet ? Une question ? N&apos;hésitez pas à nous contacter.
+          <p className="text-lg text-ink/60 leading-relaxed">
+            Vous avez un projet ? Une question ? N\u0026apos;hésitez pas à nous contacter.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white  p-8 shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-cream p-6 sm:p-8 border border-ink/5">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-ink mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-ink mb-2">
                     Nom complet
                   </label>
                   <input
@@ -59,14 +59,14 @@ export default function Contact() {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
+                    className="w-full px-4 py-3 border border-ink/10 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors bg-white"
                     placeholder="Votre nom"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-ink mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-ink mb-2">
                     Email
                   </label>
                   <input
@@ -74,21 +74,21 @@ export default function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
+                    className="w-full px-4 py-3 border border-ink/10 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors bg-white"
                     placeholder="votre@email.com"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-ink mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-ink mb-2">
                     Sujet
                   </label>
                   <select
                     id="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
+                    className="w-full px-4 py-3 border border-ink/10 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors bg-white"
                     required
                   >
                     <option value="">Sélectionnez un sujet</option>
@@ -100,7 +100,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-ink mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-ink mb-2">
                     Message
                   </label>
                   <textarea
@@ -108,7 +108,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-ink/10 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors resize-none bg-white"
                     placeholder="Décrivez votre projet ou votre question..."
                     required
                   />
@@ -116,8 +116,9 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-brown text-white font-medium  hover:bg-brown-light transition-colors"
+                  className="w-full px-8 py-4 bg-brown text-white font-semibold hover:bg-brown-light transition-colors flex items-center justify-center gap-2"
                 >
+                  <Send className="w-4 h-4" />
                   Envoyer le message
                 </button>
               </div>
@@ -132,10 +133,10 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* Map */}
-            <div className="bg-white  p-6 shadow-sm">
-              <h3 className="text-lg font-bold text-ink font-serif mb-4">Nos Antennes</h3>
+            <div className="bg-cream p-6 border border-ink/5">
+              <h3 className="text-lg font-bold text-ink mb-4">Nos Antennes</h3>
               
-              <div className="relative aspect-[4/3] bg-earth-xl  overflow-hidden">
+              <div className="relative aspect-[4/3] bg-earth-xl overflow-hidden">
                 <svg
                   viewBox="0 0 100 100"
                   className="w-full h-full"
@@ -172,9 +173,9 @@ export default function Contact() {
 
                 <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
                   {antennes.map((antenne) => (
-                    <div key={antenne.id} className="bg-white/90 backdrop-blur-sm  px-3 py-1.5 text-xs">
-                      <span className="font-medium text-ink">{antenne.name}</span>
-                      <span className="text-muted ml-1">({antenne.type})</span>
+                    <div key={antenne.id} className="bg-white/90 backdrop-blur-sm px-3 py-1.5 text-xs border border-ink/5">
+                      <span className="font-semibold text-ink">{antenne.name}</span>
+                      <span className="text-ink/50 ml-1">({antenne.type})</span>
                     </div>
                   ))}
                 </div>
@@ -182,31 +183,37 @@ export default function Contact() {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-white  p-6 shadow-sm">
-              <h3 className="text-lg font-bold text-ink font-serif mb-4">Coordonnées</h3>
+            <div className="bg-cream p-6 border border-ink/5">
+              <h3 className="text-lg font-bold text-ink mb-4">Coordonnées</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="text-xl">📍</span>
+                  <div className="w-10 h-10 bg-brown/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-brown" />
+                  </div>
                   <div>
-                    <p className="font-medium text-ink">Siège social</p>
-                    <p className="text-sm text-muted">Ouagadougou, Burkina Faso</p>
+                    <p className="font-semibold text-ink">Siège social</p>
+                    <p className="text-sm text-ink/60">Ouagadougou, Burkina Faso</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="text-xl">📞</span>
+                  <div className="w-10 h-10 bg-brown/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-brown" />
+                  </div>
                   <div>
-                    <p className="font-medium text-ink">Téléphone</p>
-                    <p className="text-sm text-muted">+226 XX XX XX XX</p>
+                    <p className="font-semibold text-ink">Téléphone</p>
+                    <p className="text-sm text-ink/60">+226 XX XX XX XX</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="text-xl">✉️</span>
+                  <div className="w-10 h-10 bg-brown/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-brown" />
+                  </div>
                   <div>
-                    <p className="font-medium text-ink">Email</p>
-                    <p className="text-sm text-muted">contact@caeasa.bf</p>
+                    <p className="font-semibold text-ink">Email</p>
+                    <p className="text-sm text-ink/60">contact@caeasa.bf</p>
                   </div>
                 </div>
               </div>

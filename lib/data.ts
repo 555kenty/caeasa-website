@@ -233,17 +233,17 @@ export const expertiseAreas = [
   {
     title: "Accompagnement Technique",
     description: "Nous offrons un soutien technique personnalisé aux entrepreneurs agricoles, de la conception à la mise en œuvre de leurs projets.",
-    icon: "🌱",
+    icon: "Sprout",
   },
   {
     title: "Finance & Investissement",
     description: "Accès aux financements, montage de dossiers bancaires et mise en relation avec des investisseurs.",
-    icon: "💰",
+    icon: "Banknote",
   },
   {
     title: "Accès aux Marchés",
     description: "Facilitation de la commercialisation des produits et connexion avec les acheteurs et distributeurs.",
-    icon: "🤝",
+    icon: "Handshake",
   },
 ];
 
