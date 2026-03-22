@@ -18,7 +18,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-medium rounded-full mb-4">
+            <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-medium  mb-4">
               À propos de nous
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-6">
@@ -46,11 +46,11 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden">
+            <div className="aspect-[4/3]  overflow-hidden">
               <div className="w-full h-full bg-gradient-to-br from-green via-earth to-brown flex items-center justify-center">
                 <span className="text-9xl">🌍</span>
               </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm  p-4">
                 <p className="text-sm text-ink font-medium">TODO: replace with real photo</p>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                className="bg-white rounded-2xl p-6"
+                className="bg-white  p-6"
               >
                 <h4 className="text-lg font-bold text-brown font-serif mb-2">{value.title}</h4>
                 <p className="text-sm text-muted">{value.description}</p>
@@ -97,7 +97,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
-                className="bg-white rounded-2xl overflow-hidden group"
+                className="bg-white  overflow-hidden group"
               >
                 <div className={`aspect-square bg-gradient-to-br ${member.gradient} flex items-center justify-center`}>
                   <span className="text-4xl font-bold text-white font-serif">{member.initials}</span>

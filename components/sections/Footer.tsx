@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-green to-green-light rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-green to-green-light  flex items-center justify-center">
                 <span className="text-white font-bold text-xl font-serif">C</span>
               </div>
               <div>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-brown transition-colors"
+                  className="w-10 h-10  bg-cream/10 flex items-center justify-center hover:bg-brown transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     {social === "facebook" && (

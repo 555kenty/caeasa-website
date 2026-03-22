@@ -65,13 +65,13 @@ export default function Cursor() {
     <>
       <div
         ref={dotRef}
-        className={`custom-cursor fixed top-0 left-0 w-2 h-2 bg-brown rounded-full pointer-events-none z-[9999] transition-opacity duration-300 ${
+        className={`custom-cursor fixed top-0 left-0 w-2 h-2 bg-brown  pointer-events-none z-[9999] transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       />
       <div
         ref={ringRef}
-        className={`custom-cursor fixed top-0 left-0 w-10 h-10 border-2 border-brown/30 rounded-full pointer-events-none z-[9998] transition-opacity duration-300 ${
+        className={`custom-cursor fixed top-0 left-0 w-10 h-10 border-2 border-brown/30  pointer-events-none z-[9998] transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       />

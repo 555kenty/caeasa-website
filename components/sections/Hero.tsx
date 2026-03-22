@@ -41,8 +41,8 @@ export default function Hero() {
         >
           <div className="space-y-8">
             <motion.div variants={itemVariants}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-xl text-green-dark text-sm font-medium rounded-full">
-                <span className="w-2 h-2 bg-green rounded-full animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-xl text-green-dark text-sm font-medium ">
+                <span className="w-2 h-2 bg-green  animate-pulse" />
                 Centre d&apos;Excellence Agricole
               </span>
             </motion.div>
@@ -67,13 +67,13 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center px-8 py-4 bg-brown text-white font-medium rounded-full hover:bg-brown-light transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-brown text-white font-medium  hover:bg-brown-light transition-colors"
               >
                 Démarrer votre projet
               </a>
               <a
                 href="#projets"
-                className="inline-flex items-center px-8 py-4 border-2 border-brown text-brown font-medium rounded-full hover:bg-brown hover:text-white transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-brown text-brown font-medium  hover:bg-brown hover:text-white transition-colors"
               >
                 Voir nos projets
               </a>
@@ -84,17 +84,17 @@ export default function Hero() {
             variants={itemVariants}
             className="relative"
           >
-            <div className="relative aspect-square rounded-3xl overflow-hidden">
+            <div className="relative aspect-square  overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-earth-400 to-brown-500" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-8xl">🌾</span>
               </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-4">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm  p-4">
                 <p className="text-sm text-ink font-medium">TODO: replace with real photo</p>
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-green rounded-2xl flex items-center justify-center shadow-lg">
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-green  flex items-center justify-center shadow-lg">
               <span className="text-4xl">🚜</span>
             </div>
           </motion.div>
@@ -113,7 +113,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 1.2 + index * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-sm"
+              className="bg-white  p-6 shadow-sm"
             >
               <p className="text-3xl sm:text-4xl font-bold text-brown font-serif">{kpi.value}</p>
               <p className="text-sm text-muted mt-1">{kpi.label}</p>

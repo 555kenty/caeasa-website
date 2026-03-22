@@ -32,7 +32,7 @@ export default function Gallery() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex-shrink-0 w-72 h-48 rounded-2xl overflow-hidden group cursor-pointer"
+              className="flex-shrink-0 w-72 h-48  overflow-hidden group cursor-pointer"
             >
               <div className="w-full h-full bg-gradient-to-br from-green-xl via-earth-xl to-brown/20 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <span className="text-5xl">{["🌾", "🌻", "🌽", "🌱", "💧", "🏭"][index]}</span>

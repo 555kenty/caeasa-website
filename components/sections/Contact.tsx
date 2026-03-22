@@ -30,7 +30,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-green/10 text-green-dark text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-green/10 text-green-dark text-sm font-medium  mb-4">
             Contactez-nous
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-4">
@@ -48,7 +48,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-white  p-8 shadow-sm">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-ink mb-2">
@@ -59,7 +59,7 @@ export default function Contact() {
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
+                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
                     placeholder="Votre nom"
                     required
                   />
@@ -74,7 +74,7 @@ export default function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
+                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
                     placeholder="votre@email.com"
                     required
                   />
@@ -88,7 +88,7 @@ export default function Contact() {
                     id="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
+                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors"
                     required
                   >
                     <option value="">Sélectionnez un sujet</option>
@@ -108,7 +108,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3  border border-cream-2 focus:border-brown focus:ring-1 focus:ring-brown outline-none transition-colors resize-none"
                     placeholder="Décrivez votre projet ou votre question..."
                     required
                   />
@@ -116,7 +116,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-brown text-white font-medium rounded-xl hover:bg-brown-light transition-colors"
+                  className="w-full px-8 py-4 bg-brown text-white font-medium  hover:bg-brown-light transition-colors"
                 >
                   Envoyer le message
                 </button>
@@ -132,10 +132,10 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* Map */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="bg-white  p-6 shadow-sm">
               <h3 className="text-lg font-bold text-ink font-serif mb-4">Nos Antennes</h3>
               
-              <div className="relative aspect-[4/3] bg-earth-xl rounded-xl overflow-hidden">
+              <div className="relative aspect-[4/3] bg-earth-xl  overflow-hidden">
                 <svg
                   viewBox="0 0 100 100"
                   className="w-full h-full"
@@ -172,7 +172,7 @@ export default function Contact() {
 
                 <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
                   {antennes.map((antenne) => (
-                    <div key={antenne.id} className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 text-xs">
+                    <div key={antenne.id} className="bg-white/90 backdrop-blur-sm  px-3 py-1.5 text-xs">
                       <span className="font-medium text-ink">{antenne.name}</span>
                       <span className="text-muted ml-1">({antenne.type})</span>
                     </div>
@@ -182,7 +182,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="bg-white  p-6 shadow-sm">
               <h3 className="text-lg font-bold text-ink font-serif mb-4">Coordonnées</h3>
               
               <div className="space-y-4">

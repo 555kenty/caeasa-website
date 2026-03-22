@@ -34,7 +34,7 @@ export default function Partners() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-medium  mb-4">
             Ils nous font confiance
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-4">
@@ -59,9 +59,9 @@ export default function Partners() {
               key={`${partner.id}-${index}`}
               className="flex-shrink-0 mx-4"
             >
-              <div className="w-64 h-32 bg-white rounded-2xl shadow-sm flex flex-col items-center justify-center px-6 hover:shadow-md transition-shadow"
+              <div className="w-64 h-32 bg-white  shadow-sm flex flex-col items-center justify-center px-6 hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-cream-2 to-earth-xl rounded-full flex items-center justify-center mb-2">
+                <div className="w-12 h-12 bg-gradient-to-br from-cream-2 to-earth-xl  flex items-center justify-center mb-2">
                   <span className="text-xl font-bold text-brown font-serif">{partner.name.charAt(0)}</span>
                 </div>
                 <p className="text-sm font-medium text-ink text-center">{partner.name}</p>

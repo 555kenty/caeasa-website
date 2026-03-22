@@ -31,7 +31,7 @@ export default function News() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-earth/10 text-earth text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-earth/10 text-earth text-sm font-medium  mb-4">
             Restez informés
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-4">
@@ -51,7 +51,7 @@ export default function News() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 flex gap-6 hover:shadow-md transition-shadow"
+                className="bg-white  p-6 flex gap-6 hover:shadow-md transition-shadow"
               >
                 {/* Date */}
                 <div className="flex-shrink-0 w-16 text-center">
@@ -61,7 +61,7 @@ export default function News() {
 
                 {/* Content */}
                 <div className="flex-grow">
-                  <span className={`inline-block px-2 py-1 rounded text-xs font-medium mb-2 ${getTagColor(item.tagColor)}`}>
+                  <span className={`inline-block px-2 py-1  text-xs font-medium mb-2 ${getTagColor(item.tagColor)}`}>
                     {item.tag}
                   </span>
                   <h3 className="text-lg font-bold text-ink font-serif mb-2">{item.title}</h3>
@@ -85,7 +85,7 @@ export default function News() {
             >
               <a
                 href="#"
-                className="inline-flex items-center px-6 py-3 border-2 border-brown text-brown font-medium rounded-full hover:bg-brown hover:text-white transition-colors"
+                className="inline-flex items-center px-6 py-3 border-2 border-brown text-brown font-medium  hover:bg-brown hover:text-white transition-colors"
               >
                 Voir toutes les actualités
               </a>
@@ -97,7 +97,7 @@ export default function News() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-6 h-fit"
+            className="bg-white  p-6 h-fit"
           >
             <h3 className="text-xl font-bold text-ink font-serif mb-6">Prochains événements</h3>
 
@@ -105,7 +105,7 @@ export default function News() {
               {events.map((event) => (
                 <div key={event.id} className="flex gap-4">
                   <div
-                    className="w-3 h-3 rounded-full mt-2 flex-shrink-0"
+                    className="w-3 h-3  mt-2 flex-shrink-0"
                     style={{ backgroundColor: event.dotColor }}
                   />
                   <div>

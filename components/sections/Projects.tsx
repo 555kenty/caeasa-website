@@ -34,7 +34,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-green/10 text-green-dark text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-green/10 text-green-dark text-sm font-medium  mb-4">
             Nos réalisations
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-4">
@@ -53,16 +53,16 @@ export default function Projects() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-12"
           >
-            <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
+            <div className="bg-white  overflow-hidden shadow-lg">
               <div className="grid lg:grid-cols-2">
                 <div className="aspect-video lg:aspect-auto bg-gradient-to-br from-green via-earth to-brown flex items-center justify-center relative">
                   <span className="text-8xl">🌾</span>
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getBadgeColor(featuredProject.badge)}`}>
+                    <span className={`px-3 py-1  text-xs font-medium ${getBadgeColor(featuredProject.badge)}`}>
                       {featuredProject.badge}
                     </span>
                   </div>
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
+                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm  px-3 py-1">
                     <p className="text-xs text-ink font-medium">TODO: replace with real photo</p>
                   </div>
                 </div>
@@ -110,12 +110,12 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-white  overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
             >
               <div className="aspect-video bg-gradient-to-br from-earth-xl to-cream-2 flex items-center justify-center relative">
                 <span className="text-5xl">{["🌻", "💧", "🏭"][index]}</span>
                 <div className="absolute top-3 left-3">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getBadgeColor(project.badge)}`}>
+                  <span className={`px-2 py-1  text-xs font-medium ${getBadgeColor(project.badge)}`}>
                     {project.badge}
                   </span>
                 </div>

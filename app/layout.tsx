@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Nunito_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Cursor from "@/components/Cursor";
 
-const playfair = Playfair_Display({
+const inter = Inter({ 
   subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const nunito = Nunito_Sans({
-  subsets: ["latin"],
-  variable: "--font-nunito",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "CAEASA - Centre d'Appui à l'Entrepreneuriat Agricole",
-  description: "Accompagnement des entrepreneurs agricoles au Burkina Faso. Formation, financement et accès aux marchés.",
+  description: "Accompagnement des entrepreneurs agricoles au Burkina Faso",
 };
 
 export default function RootLayout({
@@ -25,8 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${playfair.variable} ${nunito.variable}`}>
-      <body className="font-sans antialiased bg-cream">
+    <html lang="fr" className={inter.variable}>
+      <body className="font-sans antialiased">
+        <Cursor />
         {children}
       </body>
     </html>

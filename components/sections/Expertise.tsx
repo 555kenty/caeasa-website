@@ -18,7 +18,7 @@ export default function Expertise() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-brown/10 text-brown text-sm font-medium  mb-4">
             Nos domaines
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-ink font-serif mb-4">
@@ -37,10 +37,10 @@ export default function Expertise() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow overflow-hidden"
+              className="group relative bg-white  p-8 shadow-sm hover:shadow-xl transition-shadow overflow-hidden"
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-green-xl to-earth-xl rounded-2xl flex items-center justify-center text-3xl mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-xl to-earth-xl  flex items-center justify-center text-3xl mb-6">
                 {area.icon}
               </div>
 

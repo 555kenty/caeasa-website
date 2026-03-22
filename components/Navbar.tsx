@@ -65,7 +65,7 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, "#accueil")}
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-green to-green-dark rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-green to-green-dark  flex items-center justify-center">
               <span className="text-white font-bold text-xl font-serif">C</span>
             </div>
             <div className="hidden sm:block">
@@ -112,7 +112,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="hidden sm:inline-flex px-5 py-2.5 bg-brown text-white text-sm font-medium rounded-full hover:bg-brown-light transition-colors"
+              className="hidden sm:inline-flex px-5 py-2.5 bg-brown text-white text-sm font-medium  hover:bg-brown-light transition-colors"
             >
               Nous contacter
             </a>
