@@ -204,10 +204,10 @@ export const team: TeamMember[] = [
 ];
 
 export const kpiData = [
-  { label: "Entrepreneurs accompagnés", value: "2,500+" },
-  { label: "Projets financés", value: "180+" },
-  { label: "Emplois créés", value: "3,200+" },
-  { label: "Coopératives soutenues", value: "45+" },
+  { label: "Entrepreneurs accompagnés", value: "2,500+", icon: "Users" },
+  { label: "Projets financés", value: "180+", icon: "Sprout" },
+  { label: "Emplois créés", value: "3,200+", icon: "TrendingUp" },
+  { label: "Coopératives soutenues", value: "45+", icon: "Award" },
 ];
 
 export const values = [
